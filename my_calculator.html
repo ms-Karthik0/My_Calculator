@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        html{
+            background-color: white;
+        }
+        *{
+            background-color: aquamarine;
+            margin: 50px 50px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #num1,#num2,#result,#operators{
+            border: 5px solid brown;
+            border-radius: 10px;
+            color:black;
+            background-color: white;
+        }
+        #ab,#abc{
+            color: black;
+        }
+        body{
+            content: icon;
+            text-align: center;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1 style="font-weight:bolder;">My Calculator</h1>
+    </header>
+    <label for="text" id="ab" style="font-weight: bolder;">num1<input type="number" id="num1" ></label>
+    <label for="text" id="abc" style="font-weight: bolder;">num2<input type="number" id="num2"></label>
+    <br>
+    <select name="" id="operator" style="background-color: whitesmoke; color: black; border: 5px solid brown; border-radius: 10px;">
+      <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+    </select>
+    <br>
+    <button onclick="calc()" style="background-color: whitesmoke; color: black; border: 5px solid brown; border-radius: 10px;">=</button>
+    <label for="text" style="font-weight: bolder;">result <input type="number"id="result"></label>
+    <script>
+      
+    
+        function calc(){
+            var num1=parseFloat(document.getElementById('num1').value);
+            var num2=parseFloat(document.getElementById('num2').value);
+            var oper=document.getElementById('operator').value;
+            if(oper=='add'){
+                document.getElementById('result').value=num1+num2;
+            }
+            else if(oper=='sub'){
+                document.getElementById('result').value=num1-num2;
+            }
+            else if(oper=='mul'){
+                document.getElementById('result').value=num1*num2;
+            }else if(oper=='div'){
+                document.getElementById('result').value=num1/num2;
+            }
+        }
+    </script>
+
+</body>
+</html>
